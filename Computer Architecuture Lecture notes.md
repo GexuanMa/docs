@@ -88,13 +88,9 @@ When we execute the same `for` loop twice, the accuracy will be 70%, which is be
 ### Motivation
 
 ```
-
 DIV.D F4,  F0, F2
-
 ADD.D F10, F4, F8
-
 SUB.D F12, F6, F14
-
 ```
 
 `ADD.D` will be stalled due to RAW hazard at `F4`, and the `SUB.D` operation will also be stalled, even though it does not depend on previous instructions, so why cannot we finishSUB.Dbefore ADD.D.
