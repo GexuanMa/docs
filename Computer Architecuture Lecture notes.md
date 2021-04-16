@@ -22,7 +22,7 @@ Group #24
 ### 1-bit FSM
 
 - 1-bit FSM is the simplest form of branch history table updater. It has 2 states:`0` for `not taken` and `1` for `taken`.
-- "Change mind fast": update thetableafter each conditional branch instruction.
+- "Change mind fast": update the table after each conditional branch instruction.
 - The 2-state FSM changes between 1 `taken` and 0 `not taken`, based on the previous actual outcome.
 
 
@@ -30,7 +30,7 @@ Group #24
 
 
 
-If we execute the `for` loop twice, the prediction accuracy would be 60%.**Finding: the larger the times of the loop are, the higher the accuracy is.**
+If we execute the `for` loop twice, the prediction accuracy would be 60%. **Finding: the larger the times of the loop are, the higher the accuracy is.**
 
 ![](P29.jpg)
 
@@ -38,7 +38,7 @@ If we execute the `for` loop twice, the prediction accuracy would be 60%.**Findi
 
 **2-bit FSM**
 
--2-bit FSM has an extra bit to indicate the strongness of the prediction. The higher bit is used to indicate the direction of the prediction (`1` for `taken`, and `0` for `not taken`).
+- 2-bit FSM has an extra bit to indicate the strongness of the prediction. The higher bit is used to indicate the direction of the prediction (`1` for `taken`, and `0` for `not taken`).
 
 2-bit FSM has 4 states:
 
@@ -75,7 +75,7 @@ bne     r1,  r10, L1
 ```
 
 
-When we execute the same`for`loop twice, the accuracy will be 70%, which is better than 1-bit FSM.
+When we execute the same `for` loop twice, the accuracy will be 70%, which is better than 1-bit FSM.
 
 ![](P31.jpg)
 
