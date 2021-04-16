@@ -11,12 +11,12 @@ Group #24
 
 - Since the predictor is hashingonly onlower bits of the instructions, there mightbe hash collisions that mayaffect the accuracy of prediction, especially when multiple branch instructions have the same lower bits.
 
-![](P26.jpg)
+<p align="center"><img src=P26.jpg align="center" width=50% /></p>
 
 
 ## Update Branch History Table with Finite State Machine
 
-![](P27.jpg)
+<p align="center"><img src=P27.jpg align="center" width=25% /></p>
 
 
 ### 1-bit FSM
@@ -26,13 +26,13 @@ Group #24
 - The 2-state FSM changes between 1 `taken` and 0 `not taken`, based on the previous actual outcome.
 
 
-![](P28.jpg)
+<p align="center"><img src=P28.jpg align="center" width=40% /></p>
 
 
 
 If we execute the `for` loop twice, the prediction accuracy would be 60%. **Finding: the larger the times of the loop are, the higher the accuracy is.**
 
-![](P29.jpg)
+<p align="center"><img src=P29.jpg align="center" width=50% /></p>
 
 
 
@@ -52,7 +52,7 @@ If we execute the `for` loop twice, the prediction accuracy would be 60%. **Find
 
 A larger number indicates a greater possibility that the branch will be taken.
 
-![](P30.jpg)
+<p align="center"><img src=P30.jpg align="center" width=40% /></p>
 
 Unlike 1-bit FSM, 2-bit FSM does not **change its "mind" fastly**. For example, we need 2 consecutive `not taken` to change the prediction from `strongly taken` to `weakly not taken`.
 
@@ -77,7 +77,7 @@ bne     r1,  r10, L1
 
 When we execute the same `for` loop twice, the accuracy will be 70%, which is better than 1-bit FSM.
 
-![](P31.jpg)
+<p align="center"><img src=P31.jpg align="center" width=50% /></p>
 
 
 ## Dynamic Scheduling
@@ -113,13 +113,6 @@ Dynamic scheduling is the technique that rearranges the order of instructions to
 
 
 ### Key Concepts
-
-- ID stage divided into 2 parts
-
-    1. Check for any structural hazards.
-
-    2. Wait for the absence of a data hazard.
-
 - In order issue, out of order execution
 
     - Instructions issued in program order, as the traditional approach
@@ -139,9 +132,9 @@ In order to achieve parallelism, there should be multiple instructions in execut
 
 - ID stages are dividedinto 2 parts:
 
-1. Issue - decode instructions and check if there is any structural hazard.
+    1. Issue - decode instructions and check if there is any structural hazard.
 
-2. Read operands - wait until all data hazards are resolved,and then read operands
+    2. Read operands - wait until all data hazards are resolved,and then read operands
 
 - Instructions are executed when it does not depend on previous instructions and there's no hazard.
 
