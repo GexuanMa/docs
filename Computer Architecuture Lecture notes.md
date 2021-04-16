@@ -25,12 +25,13 @@ Group #24
 - "Change mind fast": update the table after each conditional branch instruction.
 - The 2-state FSM changes between 1 `taken` and 0 `not taken`, based on the previous actual outcome.
 
-
-<p align="center"><img src=P28.jpg align="center" width=40% /></p>
-
-
+```
+for (i=0; i<5; i++) {...}
+```
+<img src=for-instruction.jpg width=20% />
 
 If we execute the `for` loop twice, the prediction accuracy would be 60%. **Finding: the larger the times of the loop are, the higher the accuracy is.**
+<p align="center"><img src=P28.jpg align="center" width=40% /></p>
 
 <p align="center"><img src=P29.jpg align="center" width=50% /></p>
 
@@ -57,27 +58,14 @@ A larger number indicates a greater possibility that the branch will be taken.
 Unlike 1-bit FSM, 2-bit FSM does not **change its "mind" fastly**. For example, we need 2 consecutive `not taken` to change the prediction from `strongly taken` to `weakly not taken`.
 
 ```
-
 for (i=0; i<5; i++) {...}
-
-addi    r10, r0,  5
-
-addi    r1,  r0,  0
-
-L1:
-
-... ...
-
-addi    r1,  r1,  1
-
-bne     r1,  r10, L1
-
 ```
+<img src=for-instruction.jpg width=20% />
 
 
 When we execute the same `for` loop twice, the accuracy will be 70%, which is better than 1-bit FSM.
 
-<p align="center"><img src=P31.jpg align="center" width=50% /></p>
+<p align="center"><img src=P31.jpg  width=50% /></p>
 
 
 ## Dynamic Scheduling
