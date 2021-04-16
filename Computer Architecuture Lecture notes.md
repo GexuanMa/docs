@@ -11,7 +11,7 @@ Group #24
 
 - Since the predictor is hashingonly onlower bits of the instructions, there mightbe hash collisions that mayaffect the accuracy of prediction, especially when multiple branch instructions have the same lower bits.
 
-<p align="center"><img src=P26.jpg align="center" width=50% /></p>
+<p align="center"><img src=P26.jpg align="center" width=30% /></p>
 
 
 ## Update Branch History Table with Finite State Machine
