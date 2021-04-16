@@ -29,8 +29,14 @@ Group #24
 
 ```
 for (i=0; i<5; i++) {...}
+
+addi r10, r0,  5
+addi r1,  r0,  0
+L1:
+... ...
+addi r1,  r1,  1
+bne  r1,  r10, L1
 ```
-<img src=for-instruction.jpg width=20% />
 
 If we execute the `for` loop twice, the prediction accuracy would be 60%. **Finding: the larger the times of the loop are, the higher the accuracy is.**
 
@@ -61,8 +67,15 @@ Unlike 1-bit FSM, 2-bit FSM does not **change its "mind" fastly**. For example, 
 
 ```
 for (i=0; i<5; i++) {...}
+
+addi r10, r0,  5
+addi r1,  r0,  0
+L1:
+... ...
+addi r1,  r1,  1
+bne  r1,  r10, L1
 ```
-<img src=for-instruction.jpg width=20% />
+
 
 
 When we execute the same `for` loop twice, the accuracy will be 70%, which is better than 1-bit FSM.
