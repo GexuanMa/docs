@@ -25,13 +25,15 @@ Group #24
 - "Change mind fast": update the table after each conditional branch instruction.
 - The 2-state FSM changes between 1 `taken` and 0 `not taken`, based on the previous actual outcome.
 
+<p align="center"><img src=P28.jpg align="center" width=40% /></p>
+
 ```
 for (i=0; i<5; i++) {...}
 ```
 <img src=for-instruction.jpg width=20% />
 
 If we execute the `for` loop twice, the prediction accuracy would be 60%. **Finding: the larger the times of the loop are, the higher the accuracy is.**
-<p align="center"><img src=P28.jpg align="center" width=40% /></p>
+
 
 <p align="center"><img src=P29.jpg align="center" width=50% /></p>
 
