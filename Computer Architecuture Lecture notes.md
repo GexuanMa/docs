@@ -7,9 +7,9 @@ Group #24
 
 ## Dynamic Branch Predictor
 
-- The dynamic branch predictor predicts if the next branch should be taken or not taken by using a hash table('branch history table). It hashes lower bits ofthe instruction address and stores the actual outcome of the last execution. (`taken` or `not taken`)
+- The dynamic branch predictor predicts if the next branch should be taken or not taken by using a hash table('branch history table). It hashes lower bits of the instruction address and stores the actual outcome of the last execution. (`taken` or `not taken`)
 
-- Since the predictor is hashingonly onlower bits of the instructions, there mightbe hash collisions that mayaffect the accuracy of prediction, especially when multiple branch instructions have the same lower bits.
+- Since the predictor is hashing only on lower bits of the instructions, there might be hash collisions that may affect the accuracy of prediction, especially when multiple branch instructions have the same lower bits.
 
 <p align="center"><img src=P26.jpg align="center" width=30% /></p>
 
